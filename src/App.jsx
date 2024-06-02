@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import { RiCheckboxBlankFill } from 'react-icons/ri'
 import { RiCheckboxFill } from 'react-icons/ri'
@@ -5,7 +6,7 @@ import { RiDeleteBin6Fill } from 'react-icons/ri'
 import { TbPencilPlus } from 'react-icons/tb' 
 
 function App() {
-
+const [toDoList, setToDoList] = useState([]);
   return (
     <>
     <div className='header-container'>
@@ -21,6 +22,12 @@ function App() {
       </div>
     </div>
     <div className='to-do-list'>
+      {
+        toDoList.map(listItem =>{
+          return <>
+          
+          </>
+        })}
       <div className='to-do-container'>
         <p className='to-do-checkbox'>
           <RiCheckboxBlankFill />
